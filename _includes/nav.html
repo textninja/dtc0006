@@ -1,7 +1,13 @@
 <nav>
     <ul>
         {% for link in site.data.nav %}
-        <li><a href="{{ link.link }}">{{ link.name }}</a></li>
+        <li>
+            {% if page.url != link.link %}
+                <a href="{{ link.link }}">{{ link.name }}</a>
+            {% else %}
+                {{ link.name }}
+            {% endif %}
+        </li>
         {% endfor %}
     </ul>
 </nav>
