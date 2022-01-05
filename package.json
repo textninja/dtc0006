@@ -1,9 +1,0 @@
-{
-  "name": "dtc0006",
-  "version": "1.0.0",
-  "description": "Daily Tech Challenge #6 - Jekyll Blog",
-  "main": "index.js",
-  "author": "Joe Taylor",
-  "license": "MIT",
-  "private": true
-}
