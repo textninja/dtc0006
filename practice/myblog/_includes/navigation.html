@@ -1,4 +1,13 @@
 <nav>
-    <a href="/">Home</a>
-    <a href="/about.html">About</a>
+    {% if page.url == "/" %}
+        Home
+    {% else %}
+        <a href="/">Home</a>
+    {% endif %}
+
+    {% if page.url == "/about.html" %}
+        About
+    {% else %}
+        <a href="/about.html">About</a>
+    {% endif %}
 </nav>
