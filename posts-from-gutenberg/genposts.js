@@ -19,6 +19,14 @@ const fs = require('fs').promises;
     await Promise.all(chapters.map(chapter => {
         let chapNum = chapter.match(/CHAPTER (ONE|[IXV]+)/)[1];
         if (chapNum == "ONE") chapNum = "I";
-        return fs.writeFile(path.join(__dirname, "posts/" + chapNum + ".txt"), chapter);
+        return fs.writeFile(
+            path.join(__dirname, "posts/2022-01-04-chapter-" + chapNum + ".md"),
+`---
+name: Chapter ${chapNum}
+date: 2022-01-04
+author: Bertrand Russell
+---
+${chapter}`
+        );
     }));
 })();
